@@ -64,7 +64,14 @@ dantesHashOfInferno = {
   },
 }
 
-#prob1 = dantesHashOfInferno.get("level1").get("contents").__getattribute__(int[234])
-#print(prob1)
 
-print(dantesHashOfInferno["level1"]["contents"][15])
+
+print(dantesHashOfInferno["level1"]["contents"][-2])
+
+print(dantesHashOfInferno["level3"]["contents"][0]["tower"])
+
+print(dantesHashOfInferno["level5"]["contents"][0]["reeeeeee"][1]["anger"])
+
+print(dantesHashOfInferno["level9"]["contents"][0]["tower"][0]["ahhhhhh"][1]["secret"][0])
+
+
