@@ -16,9 +16,9 @@ ramit = {
   ]
 }
 def countFriends():
-    friends_count = str(ramit, ["friends"])
+    friends_count = str(ramit, ['friends'])
     for friends_count in ramit:
-        return len["friends"]
+        return len['friends']
 
-print(countFriends)        
+print(countFriends(), ramit)        
 
