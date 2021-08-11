@@ -15,16 +15,19 @@ class ShoppingList:
     def __init__(self, store_title, address):
         self.store_title = store_title
         self.address = address
-
+        
     def addNewList(cls):
         newList = input("Enter Store Name and Address \nex. CVS, 7513 Hunter Ln\n")
         cls.newShoppingList.append(ShoppingList(newList))
 
-ShoppingList.addNewList
-print(ShoppingList)
+#ShoppingList.addNewList
+#print(ShoppingList)
 
 
 while greeting != "4":
     if greeting == "1":
+        newList = input("Enter Store Name and Address \nex. CVS, 7513 Hunter Ln\n")
         ShoppingList.addNewList
         print(greeting)
+
+    break   
