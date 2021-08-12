@@ -69,47 +69,43 @@ while response != "1" or "2":
     break
 
 
-while True:
-    roundOne = ("""
+def choiceMenu():
+    theFight = ("""
 What would you like to do?
 Select 1 to Attack
 Select 2 to Run
+Select 3 to View Health
 """)
 
     choice = ""
-    choice = input(roundOne)
+    choice = input(theFight)
 
-
-    if choice == "1":
+    while True:
+     if choice == "1":
         dragon.takeDamage(30)
         print("He's still alive, attack again!")
-    if dragon.health < 50:
-        print("He's weak!! Keep Attacking!!")
-    if choice == "2":
+        print(input(theFight))
+        if dragon.health < 50:
+            print("He's weak!! Keep Attacking!!")
+     if choice == "2":
         witch.takeDamage(30)
         titan.takeDamage(30)
         print("You must fight or we will all DIE")
+     if choice == "3":
+        print(witch.health)    
 
-    if dragon.health < 40:
-            
-        break
-           
+     if dragon.health < 40:
+        print("HAZAH, YOU'VE DEFEATED THE DRAGON!!!") 
 
-# choice = ""
-# choice = input(roundOne)
-# while True:
-#     if choice == "1":
-#         dragon.takeDamage(30)
-#     if dragon.health < 50:
-#         print("He's still alive, attack again!")
-#         break
-#     if choice == "2":
-#         witch.takeDamage(30)
-#         titan.takeDamage(30)
-#         print("You must fight or we will all DIE")
-#         break
+choiceMenu()
 
-    # else:
-    #     print("HAZAH, YOU'VE DEFEATED THE DRAGON!!!") 
-    #     break   
     
+
+    
+   
+
+
+
+
+    
+   
