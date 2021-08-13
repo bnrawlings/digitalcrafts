@@ -20,7 +20,7 @@ witch = Hero("The Sorceress", "witch", 100, "Strength Spell")
 titan = Hero("The Titan", "demi-god", 100, "AK-47")
 
 
-class Villian:
+class Villain:
     def __init__(self, name, type, health):
         self.name = name
         self.type = type
@@ -32,7 +32,7 @@ class Villian:
     def getHealth(self, powerUp):
         self.health += powerUp     
 
-dragon = Villian("Puff the Magic Dragon", "dragon", 110) 
+dragon = Villain("Puff the Magic Dragon", "dragon", 100) 
 
 
 
@@ -62,7 +62,9 @@ while response != "1" or "2":
         print(startmenu, titan.name) 
 
     if response == "0":
-        print("Farewell Coward!!")    
+        print("Farewell Coward!!")
+
+    
 
     else:
         print("LOOK THE DRAGON IS COMING!!!!")    
@@ -75,31 +77,66 @@ What would you like to do?
 Select 1 to Attack
 Select 2 to Run
 Select 3 to View Health
+Select 0 to Leave This Place
 """)
 
-    choice = ""
-    choice = input(theFight)
+    user_response = ""
+    while user_response == "1" or user_response == "2" or user_response == "3":
 
-    while True:
-     if choice == "1":
-        dragon.takeDamage(30)
-        print("He's still alive, attack again!")
-        print(input(theFight))
-        if dragon.health < 50:
-            print("He's weak!! Keep Attacking!!")
-     if choice == "2":
-        witch.takeDamage(30)
-        titan.takeDamage(30)
-        print("You must fight or we will all DIE")
-     if choice == "3":
-        print(witch.health)    
 
-     if dragon.health < 40:
-        print("HAZAH, YOU'VE DEFEATED THE DRAGON!!!") 
+        if dragon.health <= 40 or witch.health <= 40 or titan.health <= 40:
+            user_response == "0"
+        break
+
+
+
+    user_response = input(theFight)
+  
+
+    if witch.health or titan.health <=40:
+            print("RIP Try Again")
+    if dragon.health <=40:
+            print("HAZAH, YOU'VE DEFEATED THE DRAGON!!!")
+        
+        
+    elif user_response == "1":
+             dragon.takeDamage(30)
+             print("You did some damage but the Dragon's health is,")
+             print(dragon.health)
+             print("He's still alive, attack again!")
+             
+
+    elif user_response == "2":
+            witch.takeDamage(30)
+            titan.takeDamage(30)
+            print("You must fight or we will all DIE")
+            
+ 
+
+    elif user_response == "3":
+            print("Your health is at:")
+            print(witch.health)
+             
+
+    elif user_response != "0" or "!" or "2" or "3":
+            print("Please Select 1, 2, or 3")
+                  
+
+    else:
+        user_response = "0"
+        print("Farewell Coward")
+        
+
+    
+            
+
 
 choiceMenu()
 
-    
+
+
+
+
 
     
    
