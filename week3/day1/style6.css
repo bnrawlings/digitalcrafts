@@ -1,0 +1,14 @@
+body {
+    background-image: url("https://d1ululg65bfe3q.cloudfront.net/images/blog/biginners-guide-on-chakra-alignment.jpg");
+}
+h1 {
+    text-align: center;
+}
+.listone {
+    text-align: center;
+    font-weight: bolder;
+}
+p {
+    text-align: center;
+    font-weight: bolder;
+}

@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    background-image: url("https://static.tumblr.com/e701bb7b0db4d6e982c53d5b0580f772/4qv3bjm/5Bao4i9dt/tumblr_static_tumblr_static_28ahx190ldgkcccw4wcko4ko4_focused_v3.jpg");
+}
+html, body {
+    background-color: aquamarine;
+}
+.bodytext {
+    font-family:'Fjalla One', sans-serif;
+    font-size: larger;
+    
+}
