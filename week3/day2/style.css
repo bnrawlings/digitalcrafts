@@ -1,38 +1,50 @@
-.mainlayout {
-    min-height: 100vh;
-    display: flex;
-    
-}
-.other {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+body {
+    background-color: lightcyan;
 }
 
-.header {
-    font-size: larger;
-    background-color: darkgoldenrod;
+
+.mainlayout {
+    
+    display: flex;
+    flex-wrap: wrap;
+    height: 464px;
+   
     
 }
-.footer {
-    font-size: larger;
-    background-color: darkolivegreen;
-  
+
+.header, .footer {
+    font-size: smaller;
+    background-color: #007cb9;
+    height: 150px;
+    width: 100%;
+    font-family: 'Amatic SC';
+    border-radius: 3px;
+    margin: 3px;
+    text-align: center;
+    
 }
+    
+
 .content {
     font-size: larger;
-    background-color: indianred;
+    background-color: #005689;
+    width: 75%;
+    margin: 2px;
+    padding: 15px;
+    border-radius: 3px;
     
    
 }
-.ads{
+.ads, .sidebar{
     font-size: larger;
-    background-color: maroon;
+    background-color: #ff895d;
+   
+    height: 900px;
+    width: 20%;
+    padding: 7px;
+    border-radius: 3px;
     
+   
 }
-.sidebar{
-    font-size: larger;
-    background-color: gray;
-    
 
-}
+    
