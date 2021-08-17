@@ -1,0 +1,38 @@
+.mainlayout {
+    min-height: 100vh;
+    display: flex;
+    
+}
+.other {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header {
+    font-size: larger;
+    background-color: darkgoldenrod;
+    
+}
+.footer {
+    font-size: larger;
+    background-color: darkolivegreen;
+  
+}
+.content {
+    font-size: larger;
+    background-color: indianred;
+    
+   
+}
+.ads{
+    font-size: larger;
+    background-color: maroon;
+    
+}
+.sidebar{
+    font-size: larger;
+    background-color: gray;
+    
+
+}
