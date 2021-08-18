@@ -1,14 +1,14 @@
-.red-box {
-    height: 30px;
-    width: 30px;
-    background-color: red;
-    margin: 5px;
-  }
-  .flex {
-    border: 2px solid pink;
-    margin: 5px;
-  }
-  .grid {
-    border: 2px solid violet;
-    margin: 5px;
-  }
+.tictac
+{
+	display: grid;
+	grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3, 50px);
+    background-color: black;
+    color:white;
+
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

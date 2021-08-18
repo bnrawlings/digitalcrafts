@@ -1,0 +1,15 @@
+.pics {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 300px);
+    justify-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px; */
+}
+img {
+    object-fit: cover;
+    width: 300px;
+    height: 100%;
+}
+
