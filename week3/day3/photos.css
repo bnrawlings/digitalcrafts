@@ -12,4 +12,32 @@ img {
     width: 300px;
     height: 100%;
 }
+@media screen and (max-width:1029px){
+    .pics {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(2, 200px);
+    
+    }
+    img {
+        object-fit: cover;
+    width: 200px;
+    height: 100%;
+    }    
 
+}
+@media screen and (max-width:479px) {
+    .pics {
+        display: grid;
+        grid-template-columns: 200px;
+      
+    
+    }
+    img {
+        object-fit: cover;
+        width: 200px;
+        height: 100%;
+    }    
+
+    
+}
