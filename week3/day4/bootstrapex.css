@@ -1,0 +1,39 @@
+.col {
+    border-bottom: solid black;
+    height: 100px;
+}
+
+
+
+.container-md {
+    height: 200px;
+    border-bottom: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+
+}
+.container-lg1 {
+    height: 350px;
+    border-bottom: solid black;
+    text-align: center;
+}
+.container-lg2 {
+    height: 350px;
+    border-bottom: solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    border: solid black;
+}
+.cols {
+    height: 30px;
+}         
+.container-sm {
+    display: flex
+    justify-content:
+}
