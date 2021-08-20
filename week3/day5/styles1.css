@@ -1,0 +1,53 @@
+body {
+    background-color: lightcyan;
+    
+}
+.mainlayout {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 400px;
+    margin: 20px;
+   
+    
+}
+
+.header  {
+    font-size: smaller;
+
+    height: 70px;
+    width: 100%;
+    font-family: 'Amatic SC';
+    border-radius: 3px;
+    margin: 3px;
+    border-bottom: solid black;
+    text-align: center;
+    
+    
+}
+    
+
+.content {
+    font-size: larger;
+    border: papayawhip;
+    border-style: ridge;
+    width: 75%;
+    height: 500px;
+    
+    
+   
+}
+ .sidebar{
+    font-size: larger;
+    border: papayawhip;
+    border-style: ridge;
+    height: 700px;
+    width: 20%;  
+    text-align: center;
+    
+}
+.footer {
+    margin: 550px;
+    border-top: solid black;
+}
