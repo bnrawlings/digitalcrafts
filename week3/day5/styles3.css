@@ -1,0 +1,41 @@
+body {
+   background-color: black;
+   color: white;
+}
+h1 {
+    color: red;
+    display: inline;
+   
+}
+
+
+.maincontain {
+    display: grid;
+    grid-template:repeat(3, 500px) / repeat(5, 500px);
+    /* gap: 1rem; */
+    color: white;
+    margin: 10px;
+    background-color: #0f0f0f;
+    border-radius: 5px;
+    
+}
+.row1 {
+   
+    grid-column-start: 1;
+    grid-column-end: 6;
+    
+}
+.row2{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    
+}
+.row3{
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+img {
+    width: 300px;
+    height: 200px;
+    
+}
