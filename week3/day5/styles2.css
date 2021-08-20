@@ -1,0 +1,40 @@
+.wholething {
+    display: grid;
+    grid-template: repeat(5,200px) / repeat(4, 300px);
+    gap: 1rem;
+}
+.b1, .b2, .b3, .b4, .b5,
+.b6, .b7, .b8, .b9, .b10 {
+    background-color: gold;
+
+
+}
+.b1{
+    grid-column-start: 1;
+    grid-column-end: 5;
+   
+}
+.b2{
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+.b3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+.b4 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.b5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.b10 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
