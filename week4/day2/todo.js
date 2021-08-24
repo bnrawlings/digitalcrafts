@@ -7,6 +7,13 @@ const instruct = document.createElement("p");
 instruct.innerHTML = "Create a To-Do List by entering your action item in the feild below:";
 holder.append(instruct)
 
-const input = document.querySelector(".inputField")
-const newListItem = document.createElement("li")
-newListItem.innerHTML = input.value
+// const input = document.querySelector(".inputField")
+// const newListItem = document.createElement("li")
+// newListItem.innerHTML = input.value
+
+function alertMe() {
+    const valueOfInput = input.value;
+    word.innerHTML = valueOfInput;
+    secondaryCont.append(word);
+    console.log("this is valueOfInput", valueOfInput);
+  }
