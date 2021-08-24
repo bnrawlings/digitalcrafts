@@ -1,10 +1,10 @@
 // Write a madlib function, which is given a name and a subject. 
 // It will return(not print) a new string: (name)'s favorite subject in school is (subject).
 
-// function madLib (name, subject){
-//     return name, subject;
-// }
-// console.log(madLib(Brittney, english))
+function madLib (name, subject){
+    console.log(`${name}"'s favorite subject in school is"${subject}`)
+}
+madLib(brittney, english)
 
 // Write a function tipAmount that is given the bill amount 
 // and the level of service (one of good, fair and poor) 
@@ -70,20 +70,33 @@
 
 // Write function printBox which is given a width and height and prints 
 // a hollow box of those given dimensions.
-const printBox = (width,height)=>{
-    for (let x=1; x<= width; x++){
-        for(let y=1; y <= height; y++){
-            if  (x==1 || x==width);
-            console.log("-");
-             if (y==1 || y==height)
-            console.log("|");
-            else
-                console.log(" ")
-        }
-    }
-}
-printBox(6,4)
+// const printBox = (width,height)=>{
+//     for (let x=1; x<= width; x++){
+//         for(let y=1; y <= height; y++){
+//             if  (x==1 || x==width);
+//             console.log("-");
+//              if (y==1 || y==height)
+//             console.log("|");
+//             else
+//                 console.log(" ")
+//         }
+//     }
+// }
+// printBox(6,4)
 
+// Write a function printBanner which is given some text and prints a banner with a 
+// border surrounding the text. The border has to stretch to the length of the text.
 
+// const printBanner =(message)=>{
+//    let dash = "-"
+//    let format = `
+//         ${dash}
+//         ${message}
+//         ${dash} 
+   
+//    `
+
+// };
+// printBanner()
 
 
