@@ -1,0 +1,36 @@
+body {
+    font-family: "Poppins", sans-serif;
+    color: #4f5252;
+    background-color: #05445e;
+  }
+  
+  .main {
+    background-color: #d4f1f4;
+    display: grid;
+    border: solid black;
+    height: 70vh;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+  }
+  .form-cont{
+    border: solid black;
+    height: 30vh;
+    width: 50vw;
+    
+  }
+  
+  .container2,
+  .container5 {
+    background-color: #05445e;
+    height: 60px;
+    width: 100%;
+  }
+  
+ 
+  .container2,
+  .container5 {
+    /* padding-left: 5px; */
+    padding-top: 10px;
+    border-radius: 5px;
+  }
