@@ -4,16 +4,26 @@ title.innerHTML = "TO-DO LIST"
 holder.append(title)
 
 const instruct = document.createElement("p");
-instruct.innerHTML = "Create a To-Do List by entering your action item in the feild below:";
+instruct.innerHTML = "Create a To-Do List by entering your action item in the feild above:";
 holder.append(instruct)
 
-// const input = document.querySelector(".inputField")
-// const newListItem = document.createElement("li")
-// newListItem.innerHTML = input.value
+const maincontain = document.querySelector(".main")
+const input = document.querySelector(".inputField")
+const submitButton = document.querySelector(".submitButton")
+const newListItem = document.createElement("li")
 
 function alertMe() {
+    const newListItem = document.createElement("li")
     const valueOfInput = input.value;
-    word.innerHTML = valueOfInput;
-    secondaryCont.append(word);
-    console.log("this is valueOfInput", valueOfInput);
+    newListItem.innerHTML = valueOfInput;
+    maincontain.append(newListItem);
+    console.log(valueOfInput);
   }
+
+  function successMessage() {
+    alert("This action item has been added to you to-do list!");
+  }
+  submitButton.addEventListener("click", () => {
+    successMessage();
+    alertMe();
+  })

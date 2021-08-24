@@ -1,24 +1,24 @@
 body {
-    font-family: "Poppins", sans-serif;
-    color: #4f5252;
-    background-color: #05445e;
+    font-family: 'Rampart One';
+    color: orange;
+    background-color: #00cdcd;
   }
   
   .main {
-    background-color: #d4f1f4;
+    background: rgb(91,39,163);
+    background: radial-gradient(circle, rgba(91,39,163,1) 0%, rgba(63,190,24,1) 51%, rgba(0,212,255,1) 100%);
     display: grid;
-    border: solid black;
+    /* border: solid black; */
     height: 70vh;
-    border-radius: 5px;
+    border-radius: 3px;
     justify-content: center;
     text-align: center;
   }
   .form-cont{
-    /* border: solid black; */
+   
     height: 30vh;
     width: 50vw;
-    
-    
+    margin-top: 100px;
   }
   
   .container2,
@@ -34,4 +34,12 @@ body {
     /* padding-left: 5px; */
     padding-top: 10px;
     border-radius: 5px;
+  }
+  ::placeholder{
+      color: orange;
+  }
+  button{
+      font-family: 'Rampart One' ;
+      background-color: rebeccapurple;
+      color: orange;
   }
