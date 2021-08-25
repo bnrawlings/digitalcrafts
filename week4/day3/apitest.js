@@ -1,10 +1,11 @@
 async function getNorrisJoke(){
     // const norrisContain = document.querySelector("norrisJokes");
-    const norrisJokes = await fetch("http://api.icndb.com/jokes/random");
+    const norrisJokes = await fetch("https://official-joke-api.appspot.com/random_joke");
     const jsonJokes = await norrisJokes.json();
-    // console.log(jsonJokes)
+    console.log(jsonJokes)
     // const newJoke = document.createElement("h2")
     // newJoke.append(jsonJokes);
+    // norrisContain.append(newJoke);
     return jsonJokes;
     
 }
