@@ -3,8 +3,8 @@ async function getNorrisJoke(){
     const norrisJokes = await fetch("https://official-joke-api.appspot.com/random_joke");
     const jsonJokes = await norrisJokes.json();
     console.log(jsonJokes)
-    // const newJoke = document.createElement("h2")
-    // newJoke.append(jsonJokes);
+    const newJoke = document.createElement("h2")
+    newJoke.innerHTML = jsonJokes
     // norrisContain.append(newJoke);
     return jsonJokes;
     
