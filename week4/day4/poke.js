@@ -209,25 +209,20 @@ const data = [
     const pokemonData = await fetch("https://pokeapi.co/api/v2/pokemon");
     const jsonPokeData = await pokemonData.json();
   
-    const cardContainer = document.querySelector(".card-container");
   
-    for (const singleCardData of jsonPokeData.results) {
-      const cards = document.createElement("div");
-      const cardImg = document.createElement("img")
-      cards.className = "cards";      
-      const cardName = document.createElement("h4");
-      cardName.innerHTML = singleCardData.name;
-      cards.append(cardImg, cardName);
-      cardContainer.append(cards);
+  }
+    for (const pokes of data[0].pokemon){
+        const cardContainer = document.querySelector(".card-container");
+        cardContainer.className = "cards"
+        const pokeName = document.createElement("h4")
+        pokeName.innerHTML = pokes.name
+        cards.append(pokes.name)
+        // const pokeImg = document.createElement("img")
+        // pokeImg.src = poke.sprites.front
+
+        
     }
-        for (const pokes of data[0].pokemon){
-            const cardImg = document.createElement("img");
-            cardImg.src = pokes.sprites.front;
-            cards.append(cardImg)
-            
-
-    //  }
-
+  
+  
      
   fetchPokemonData();
-  
