@@ -19,13 +19,13 @@ async function getMovies(){
     
     
 
-  for (const movie in jsonMovies.Search){
-      const movieImg = document.createElement("img");
-      console.log(movie)
-      const movieTitle = document.createElement("h3");
-      movieImg.src = movie.Poster;
-      movieTitle.innerHTML = movie.Title
-      movieDeckcon.append(movieTitle, movieImg)
+  // for (const movie in jsonMovies){
+  //     const movieImg = document.createElement("img");
+  //     console.log(movie)
+  //     const movieTitle = document.createElement("h3");
+  //     movieImg.src = movie.Poster;
+  //     movieTitle.innerHTML = movie.Title
+  //     movieDeckcon.append(movieTitle, movieImg)
   }
 }
 
