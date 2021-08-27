@@ -2,6 +2,10 @@ console.log("Connected!")
 
 const bigContain = document.querySelector(".mainContain")
 const searButton = document.querySelector(".searchButton")
+const weatherwid = document.createElement("div");
+bigContain.append(weatherwid)
+weatherwid.className = "newWidget";
+const tempature = document.createElement("h4");
 
 async function getWeather(){
     const zipCode = document.querySelector(".input").value;
@@ -10,10 +14,7 @@ async function getWeather(){
     const weatherData = await fetch (weatherURL);
     const jsonWeather = await weatherData.json();
     console.table(jsonWeather.main)
-    const weatherwid = document.createElement("div");
-    bigContain.append(weatherwid)
-    weatherwid.className = "newWidget";
-    const tempature = document.createElement("h4");
+    
     tempature.innerHTML = jsonWeather.main.temp;
     newWidget.append(tempature)
     }
