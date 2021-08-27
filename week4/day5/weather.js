@@ -1,11 +1,12 @@
 console.log("Connected!")
 
 const bigContain = document.querySelector(".mainContain")
+console.log(bigContain)
 const searButton = document.querySelector(".searchButton")
 const weatherwid = document.createElement("div");
-bigContain.append(weatherwid)
-weatherwid.className = "newWidget";
 const tempature = document.createElement("h4");
+weatherwid.className = "newWidget";
+
 
 async function getWeather(){
     const zipCode = document.querySelector(".input").value;
@@ -16,9 +17,10 @@ async function getWeather(){
     console.table(jsonWeather.main)
     
     tempature.innerHTML = jsonWeather.main.temp;
-    newWidget.append(tempature)
+    weatherwid.append(tempature)
     }
 
+    bigContain.append(weatherwid)
 
 searButton.addEventListener("click", ()=>{getWeather();
 })            
