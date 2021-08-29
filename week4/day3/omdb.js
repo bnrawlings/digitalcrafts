@@ -8,7 +8,7 @@ const movieDeckcon = document.querySelector(".movieDeck")
 const searchButton = document.querySelector(".searchButton")
 
 async function getMovies(){
-    movieDeckcon.innerHTML = "";
+    // movieDeckcon.innerHTML = "";
     
     
     const input = document.querySelector(".inputField").value;
@@ -19,13 +19,13 @@ async function getMovies(){
     
     
 
-  for (const movie in jsonMovies.Search){
+  for (const movie of jsonMovies.Search){
+    const movieTitle = document.createElement("h3");
         const movieImg = document.createElement("img");
-        const movieTitle = document.createElement("h3");
-      // console.log(movie)
+      console.log(movie)
         movieTitle.innerHTML = movie.Title;
         movieImg.src = movie.Poster;
-        movieDeckcon.append(movieTitle, movieImg);
+        movieDeckcon.append(movieImg, movieTitle);
       }
   }
   

@@ -1,16 +1,30 @@
-.movieDeck {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    border: solid black;
+.mainContain {
+   
     
 
 }
 
-.mainContain {
+
+
+
+
+.movieDeck {
+    
+    justify-content: space-between;
+    align-content:space-between;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     display: grid;
-    align-content: center;  
+    grid-template: repeat(5, 1fr)/ repeat(4, 200px);
+    
+    
+
 }
+
+
 .searchButton {
     width: 100px;
 }
