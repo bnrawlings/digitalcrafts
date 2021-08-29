@@ -3,5 +3,17 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     border: solid black;
-    ;
+    
+
+}
+
+.mainContain {
+    display: grid;
+    align-content: center;  
+}
+.searchButton {
+    width: 100px;
+}
+.inputField {
+    width: 100px;
 }
