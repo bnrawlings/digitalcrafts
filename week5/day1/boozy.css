@@ -1,0 +1,125 @@
+h1 {
+    color: teal;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    background-image: url(https://images.unsplash.com/photo-1481391564276-da6fcacaee31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1234&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .navbar {
+    overflow: hidden;
+    /* background-color: #5c4d7d; */
+    border-radius: 5px;
+    border-bottom: double whitesmoke;
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color:#723c70;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .container{
+      display: grid;
+      grid-template: repeat(5,200px)/repeat(5,300px);
+      gap: 1rem;
+      display: flexbox;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      
+     
+     
+  }
+  .h2-contain{
+      grid-column-start: 1;
+      grid-column-end: 6;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      display: flex;
+      justify-content: center;
+      color:white;
+      font-family: 'Rampart One';
+      font-size: 40px;
+      background: -webkit-linear-gradient(#ac46a1, #ff0a54);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+    }
+  .box1{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    /* border: solid black; */
+    
+    
+   
+  }
+  .box2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    /* border: solid black; */
+    
+  }
+  .box3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    /* border: solid black; */
+  }
+  .bottomCon{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border-top: double whitesmoke;
+    font-family: 'Rampart One';
+    font-size: 20px;
+    color: #774c60;
+  }
