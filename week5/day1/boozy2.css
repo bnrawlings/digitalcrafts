@@ -1,6 +1,3 @@
-h1 {
-    color: tomato;
-}
 body{
     background-color: #e3dcdf;
 }
@@ -57,3 +54,33 @@ body{
   .dropdown:hover .dropdown-content {
     display: block;
   }
+.mainContain{
+    display: grid;
+    grid-template: repeat(4,1fr) / repeat(5,1fr);
+    gap: 2rem;
+}
+img{
+    width: 200px;
+    border: solid snow;
+}
+h3{
+    font-family: 'Rampart One';
+    border-bottom: double snow;   
+}  
+.searchField{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 15px;
+}
+h2{
+    display: flex;
+      justify-content: center;
+      color:white;
+      font-family: 'Rampart One';
+      font-size: 40px;
+      background: -webkit-linear-gradient(#ac46a1, #ff0a54);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+}
