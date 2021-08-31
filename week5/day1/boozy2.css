@@ -1,5 +1,6 @@
 body{
     background-color: #e3dcdf;
+    font-family: 'Rampart One';
 }
 .navbar {
     overflow: hidden;
@@ -9,7 +10,7 @@ body{
   }
   .navbar a {
     float: left;
-    font-size: 16px;
+    font-size: 17px;
     color: white;
     text-align: center;
     padding: 14px 16px;
@@ -20,7 +21,7 @@ body{
     overflow: hidden;
   }
   .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 17px;  
     border: none;
     outline: none;
     color: white;
@@ -57,25 +58,42 @@ body{
 .mainContain{
     display: grid;
     grid-template: repeat(4,1fr) / repeat(5,1fr);
-    gap: 2rem;
+    gap: 2rem; 
+    margin: 200px;
+    padding: 10px;
 }
+.glassCon{
+    
+}
+
 img{
     width: 200px;
     border: solid snow;
+}
+img:hover {
+    width: 350px;
+    height: 450px
 }
 h3{
     font-family: 'Rampart One';
     border-bottom: double snow;   
 }  
+.searBtn{
+    background-color: #723c70;
+    color: whitesmoke;
+    border-radius: 5px;
+}
 .searchField{
     display: flex;
     justify-content: center;
     align-content: center;
     margin: 15px;
+    font-family: 'Rampart One';
 }
 h2{
     display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       color:white;
       font-family: 'Rampart One';
       font-size: 40px;
@@ -83,4 +101,27 @@ h2{
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       
+}
+@media screen and (max-width:1029px){
+    .mainContain{
+        display: grid;
+        grid-template: repeat(2,1fr) / repeat(3,1fr);
+        gap: 2rem; 
+        margin: 200px;
+        padding: 10px;
+    }
+
+}
+@media screen and (max-width:479px){
+    .mainContain{
+        display: grid;
+        gap: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+
+    }
+
 }
