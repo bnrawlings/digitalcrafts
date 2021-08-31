@@ -1,13 +1,13 @@
 h3 {
     color: #774c60;
+    
 }
 body {
     font-family: 'Rampart One';
     background-color: #e3dcdf;
-    /* background-image: url(https://images.unsplash.com/photo-1481391564276-da6fcacaee31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1234&q=80);
-    background-position:10vh;
-    background-repeat: no-repeat; */
-    
+    background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1234&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .navbar {
     overflow: hidden;
@@ -124,6 +124,7 @@ body {
     font-size: 20px;
     font-weight: bolder;
     color: #774c60;
+    
   }
 
   @media screen and (max-width:1029px){
@@ -153,4 +154,5 @@ body {
         justify-content: center;
         align-content: center;
     }
+    
   }
