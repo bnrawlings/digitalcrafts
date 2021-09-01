@@ -4,7 +4,7 @@ h3 {
 }
 body {
     font-family: 'Rampart One';
-    background-color: #e3dcdf;
+    background-color:  #e3dcdf;
     background-image: url(https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1234&q=80);
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,6 +125,32 @@ body {
     font-weight: bolder;
     color: #774c60;
     
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
   }
 
   @media screen and (max-width:1029px){
