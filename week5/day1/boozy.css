@@ -72,7 +72,7 @@ body {
       align-content: center;
       
      
-     
+     /* gradient features for Boozy Logo */
   }
   .h2-contain{
       grid-column-start: 1;
@@ -152,24 +152,29 @@ body {
     background: #125688;
     color: white;
   }
+  /* Mobile responsiveness CSS */
 
   @media screen and (max-width:1029px){
     .container{
-        display: grid;
-        grid-template: repeat(3,200px)/repeat(3,300px);
-        gap: 1rem;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
-        align-content: center;
-        
-       
-       
-    }
-
+        align-items: center;
+        flex-wrap: wrap;
+        /* display: grid;
+        grid-template: repeat(3,200px)/repeat(3,300px); */
+        gap: 1rem;
   }
-
+    .bottomCon{
+      
+        border-top: double whitesmoke;
+        font-family: 'Rampart One';
+        font-size: 20px;
+        font-weight: bolder;
+        color: #774c60;
+        background-color: seashell;
+}
+  }
   @media screen and (max-width:479px){
     .container{
         display: grid;
@@ -188,5 +193,11 @@ body {
         font-weight: bolder;
         color: #774c60;
         background-color: seashell;
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
   }

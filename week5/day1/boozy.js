@@ -3,7 +3,10 @@ console.log("connected!")
 const mainCon = document.querySelector(".mainContain")
 const searchBtn = document.querySelector(".searBtn")
 
+// API for drinks data
 const drinkURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?"
+
+//    Async Function for retriving data from API above
 
 async function getDrinks(){
     const sInput = document.querySelector(".input").value;
@@ -12,7 +15,7 @@ async function getDrinks(){
     console.table(jsonDrink)
 
     mainCon.innerHTML = "";
-
+    // For loop for drink data that also accomplished DOM manipulation with data grabbed from API
    for(const drink of jsonDrink.drinks){
        
        const glassCon = document.createElement("div");
@@ -34,5 +37,5 @@ async function getDrinks(){
 
 
 }
-
+        // attached call function to submit button to execute above async function
 searchBtn.addEventListener("click", () => getDrinks());

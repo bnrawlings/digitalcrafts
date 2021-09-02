@@ -95,3 +95,25 @@ body {
   textarea{
       width: 450px;
   }
+  .submit{
+    background-color: #723c70;
+    color: whitesmoke;
+    border-radius: 5px;
+  }
+  @media screen and (max-width:479px){
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;            text-align: center;
+
+    
+    }
+    }
+
+}

@@ -132,3 +132,11 @@ body {
   .icons{
       gap: 1rem;
   }
+  @media screen and (max-width:479px){
+    h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }  
+}
