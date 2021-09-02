@@ -180,5 +180,13 @@ body {
         justify-content: center;
         align-content: center;
     }
-    
+    .bottomCon{
+      
+        border-top: double whitesmoke;
+        font-family: 'Rampart One';
+        font-size: 20px;
+        font-weight: bolder;
+        color: #774c60;
+        background-color: seashell;
+    }
   }
