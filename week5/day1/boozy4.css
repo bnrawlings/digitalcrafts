@@ -95,13 +95,13 @@ body {
     font-family:'Rampart One' ;
 }
 .bottomCon{
-    color: #774c60 ;
+    color: whitesmoke ;
     font-weight: bolder;
     font-family:'Rampart One' ;
     gap: 1rem;
     border-top: double whitesmoke;
-
-
+    
+    
 }
 .fa {
     padding: 20px;
