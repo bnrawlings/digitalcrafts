@@ -28,7 +28,7 @@ app.get("/getStock", async (req, res) =>{
     res.send(data);
     console.log("Stock are up")
 });
-// Route to get specific stock information
+// Route to get specific stock information by criteria
 app.get("/getStock", async (req, res) =>{
     const { data, error } = await supaBase.from("Stock_Information").select(`name, ticker`);
     res.send(data);
@@ -54,6 +54,17 @@ app.put("/updateStock/:name", async (req, res) =>{
     console.log(name)
     res.send(data);
     console.log(`Your stock ${data} has been updated`)
+});
+// Route to delete stock info
+app.delete("/deleteStock/:id", async (req, res) =>{
+    const id = req.params.id;
+    const { data, error } = await supaBase
+    .from("Stock_Information")
+    .delete()
+    .match({ id:id})
+    console.log(id)
+    res.send(data);
+    console.log(`Your stock ${data} has been deleted`)
 });
 
 
