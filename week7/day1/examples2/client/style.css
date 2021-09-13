@@ -1,0 +1,16 @@
+.mainContain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 400px;
+    
+}
+.secContain{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    height: 400px;
+    width: 400px;
+    background-color: #44c2e5;
+}
