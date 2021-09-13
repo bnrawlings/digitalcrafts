@@ -23,17 +23,16 @@ app.post("/addRestaurant", (req, res) => {
     });
 })
     //READ
-app.get("/getUser", (req, res) => {
-    // res.send("/createUser");
-    creds.connect((err,client,release) => {
-        client.query("RAW SQL GOES HERE", (err, result) => {
+app.get("/getRestaurant", (req, res) => {
+    creds.connect((err, client,release) => {
+        client.query("SELECT * FROM resturants", (err, result) => {
             console.log(err);
             console.log(result);
             if (err){
                 res.status(400).send(err.stack);
             }
-            res.status(200).send(results);
+            res.status(200).send(result);
         });
     });
-});
+    });
 app.listen(PORT, console.log(`Listening on port ${PORT}`));
