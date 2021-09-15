@@ -4,11 +4,11 @@ const express = require("express");
 const cors = require("cors")
 const app = express();
 const PORT = 3006
-const es6Renderer = require("express-es6-template-engine");
+// const es6Renderer = require("express-es6-template-engine");
 
-app.engine("html", es6Renderer);
-app.set("views", "templates");
-app.set("view engine", "html");
+// app.engine("html", es6Renderer);
+// app.set("views", "templates");
+// app.set("view engine", "html");
 
 
 
@@ -20,11 +20,6 @@ app.use(cors());
 // .findByPk()
 // .update()
 // .destroy()
-
-// DATA FROM HTML PAGE
-const newTask = {}
-
-
 
 // CREATING or POSTING DATA TO DATABASE
 app.post("/create_task", async (req, res) => {
