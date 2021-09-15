@@ -3,7 +3,7 @@ const { TodoList } = require("./models");
 const express = require("express");
 const app = express();
 const PORT = 3006
-// const creds = require("./db");
+
 
 
 app.use(express.json());
@@ -16,11 +16,6 @@ app.use(express.json());
 // CREATING or POSTING DATA TO DATABASE
 app.post("/create_task", async (req, res) => {
  const { taskTodo, priority } = req.body;
-    //DESTRUCTED CODE of above line
-    // const firstName = req.body.firstName;
-    // const lastName = req.body.lastName;
-    // const email = req.body.email;
-
     const newTask = await TodoList.create({
         taskTodo: taskTodo,
         priority: priority,
@@ -29,41 +24,41 @@ app.post("/create_task", async (req, res) => {
     res.send({ newTask });
 });
 
-// GETTING DATA FROM DATABASE
-app.post("/get_users", async (req, res) => {
-       const users = await Users.findAll();
-       res.send(users);
+// GETTING TASK FROM DATABASE
+app.post("/get_task", async (req, res) => {
+       const tasks = await TodoList.findAll();
+       res.send(tasks);
    });
 
 // GETTING SPECIFIC DATA FROM DATABASE
-app.post("/get_users_by_lastname", async (req, res) => {
-    const users = await Users.findAll({
-        attributes: ["lastName"]
+app.post("/get_task_by_priority", async (req, res) => {
+    const tasks = await TodoList.findAll({
+        attributes: ["priority"]
     });
-    res.send(users);
+    res.send(tasks);
 });
-// GETTING SINGLE USER DATA
-app.post("/get_users/:id", async (req, res) => {
-    const user = await Users.findByPk(req.params.id);
-    res.send(user);
+// GETTING SINGLE TASK DATA
+app.post("/get_task/:id", async (req, res) => {
+    const tasks = await TodoList.findByPk(req.params.id);
+    res.send(tasks);
 });
-// UPDATING USER DATA
-app.post("/update_users/:id", async (req, res) => {
-    const user = await Users.update(req.body, {
+// UPDATING TASK DATA
+app.post("/update_task/:id", async (req, res) => {
+    const tasks = await TodoList.update(req.body, {
         where: {
             id: req.params.id,
         },
     });
-    res.send(user);
+    res.send(tasks);
 });
 // DELETING USER DATA
-app.post("/delete_users/:id", async (req, res) => {
-     await Users.destroy(req.body, {
+app.post("/delete_task/:id", async (req, res) => {
+     await TodoList.destroy( {
         where: {
             id: req.params.id,
         },
     });
-    res.send("Deleted");
+    res.send("Your task has been deleted");
 });
 
 
