@@ -1,0 +1,20 @@
+.bugattiCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+img:hover{
+    border: solid black;
+    height: 350px;
+    width: 450px;
+}
+button{
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 5px;
+}
+body {
+ font-family: 'Fjalla One', sans-serif; 
+}
