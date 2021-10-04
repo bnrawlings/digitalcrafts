@@ -1,19 +1,37 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from "react";
+import { FormContainer, TheForm, TheInput, LoginButton } from "../styled-components/FormStyle";
 
 export default function Form() {
-const [formData, setFormData] = useState({});
-    return (
+  const [formData, setFormData] = useState({});
+
+  return (
+    <FormContainer>
+        <h1>Login to continue! </h1>
+        <TheForm>
+        <TheInput
+          onChange={(e) =>
+            setFormData({ ...formData, [e.target.name]: e.target.value })
+          }
+          type="text"
+          placeholder="username"
+          name="username"
+          value={formData?.username}
+        />
+        <TheInput
+          onChange={(e) =>
+            setFormData({ ...formData, [e.target.name]: e.target.value })
+          }
+          type="password"
+          placeholder="password"
+          name="password"
+          value={formData?.password}
+        />
+         <input type='radio'/> 
         <div>
-            <h1>Form</h1>
-            <form>
-            <input onChange={(e)=> setFormData({...formData, [e.target.name]: e.target.value})}type="text" placeholder="username" name="username" value={formData?.username}/>
-            <input onChange={(e)=> setFormData({...formData, [e.target.name]: e.target.value})}type="text" placeholder="email" name="email" value={formData?.email}/>
-            <input onChange={(e)=> setFormData({...formData, [e.target.name]: e.target.value})}type="password" placeholder="password" name="password" value={formData?.password}/>
-            <div>
-            <input type="submit"/>
-            </div>
-            </form>
+          <LoginButton>LOGIN</LoginButton>
         </div>
-    )
+        <p>Forgot your password?</p>
+      </TheForm>
+    </FormContainer>
+  );
 }

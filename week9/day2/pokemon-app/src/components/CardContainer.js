@@ -209,7 +209,7 @@ export default class CardContainer extends Component {
     render() {
         return (
             <div>
-                {this.state.pokemon.map()}
+                {this.state.pokemon.map((poke) => (<h2>{poke}</h2>) )}
             </div>
         )
     }

@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
+import {
+  UserButton,
+  HeaderHeader,
+  HeaderContainer,
+  UserPicture,
+} from "../styled-components/HeaderStyle";
 
 const URL = "https://randomuser.me/api/";
-export default function Header() {
+
+export default function Header(props) {
+  console.log(props)
+  const viewSidebar = props.viewSidebar
+  const setViewSidebar = props.setViewSidebar
   const [user, setUser] = useState({});
   const [counter, setCounter] = useState(0);
   // useEffect is a hook
@@ -34,10 +44,17 @@ export default function Header() {
   // useEffect(()=>{},[variable]) fire when we mount and only when when variable changes in value
 
   return (
-    <div>
-      <h1>Header</h1>
-      <img src={user} alt="" />
-      <button onClick={() => setCounter(counter + 1)}>Get New User</button>
-    </div>
+    <HeaderContainer>
+      <UserButton onClick={()=>setViewSidebar(viewSidebar)}>Show SideBar</UserButton>
+    
+      <UserPicture src={user?.picture?.large} alt="" />
+      <p>
+        Welcome {user?.name?.first} {""} {user?.name?.last}
+      </p>
+
+      <UserButton onClick={() => setCounter(counter + 1)}>
+        Get New User
+      </UserButton>
+    </HeaderContainer>
   );
 }
