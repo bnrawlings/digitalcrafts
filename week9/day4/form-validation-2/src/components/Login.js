@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormContainer, TheForm, TheInput, LoginButton } from "../styled-components/FormStyle";
 
-export default function Form() {
+export default function Login() {
   const [formData, setFormData] = useState({});
 
   return (

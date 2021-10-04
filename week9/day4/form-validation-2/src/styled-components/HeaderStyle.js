@@ -20,7 +20,7 @@ export const HeaderHeader = styled.h1`
   font-family: "Roboto", sans-serif;
 `;
 export const HeaderContainer = styled.div`
-  background-color: #424c58;
+  background-color: #DFDACD;
   grid-area: header;
   display: flex;
   flex-direction: row;

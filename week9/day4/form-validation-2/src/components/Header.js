@@ -45,12 +45,12 @@ export default function Header(props) {
 
   return (
     <HeaderContainer>
-      <UserButton onClick={()=>setViewSidebar(viewSidebar)}>Show SideBar</UserButton>
+      <UserButton onClick={()=>setViewSidebar(!viewSidebar)}>Show SideBar</UserButton>
     
       <UserPicture src={user?.picture?.large} alt="" />
-      <p>
+      <HeaderHeader>
         Welcome {user?.name?.first} {""} {user?.name?.last}
-      </p>
+      </HeaderHeader>
 
       <UserButton onClick={() => setCounter(counter + 1)}>
         Get New User

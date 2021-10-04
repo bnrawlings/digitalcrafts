@@ -1,4 +1,4 @@
-import Form from "./components/Form";
+import Login from "./components/Login";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
@@ -18,8 +18,8 @@ function App() {
     <MainContainer>
       <Header viewSidebar={viewSidebar} setViewSidebar={setViewSidebar}/>
       <Sidebar viewSidebar={viewSidebar}/>
-      <Route path='/form'>
-      <Form />
+      <Route path='/login'>
+      <Login />
       </Route>
       <Route exact path='/'>
       <Home/>
