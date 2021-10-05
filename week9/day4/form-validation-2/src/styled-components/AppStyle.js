@@ -9,4 +9,5 @@ export const MainContainer = styled.div`
     "sidebar formcontainer formcontainer formcontainer"
     "sidebar footer footer footer";
   grid-template-rows: auto;
+  background-color: #DAE3E6;
 `;

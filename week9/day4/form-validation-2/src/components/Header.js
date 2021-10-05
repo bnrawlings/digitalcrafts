@@ -4,6 +4,7 @@ import {
   HeaderHeader,
   HeaderContainer,
   UserPicture,
+  WelcomeDiv,
 } from "../styled-components/HeaderStyle";
 
 const URL = "https://randomuser.me/api/";
@@ -45,16 +46,19 @@ export default function Header(props) {
 
   return (
     <HeaderContainer>
-      <UserButton onClick={()=>setViewSidebar(!viewSidebar)}>Show SideBar</UserButton>
-    
+      <UserButton onClick={()=>setViewSidebar(!viewSidebar)}>___ ___ ___</UserButton>
+      <WelcomeDiv>
+      <UserButton onClick={() => setCounter(counter + 1)}>
+        Get New User
+      </UserButton>
       <UserPicture src={user?.picture?.large} alt="" />
       <HeaderHeader>
         Welcome {user?.name?.first} {""} {user?.name?.last}
       </HeaderHeader>
+      </WelcomeDiv>
+      
 
-      <UserButton onClick={() => setCounter(counter + 1)}>
-        Get New User
-      </UserButton>
+      
     </HeaderContainer>
   );
 }

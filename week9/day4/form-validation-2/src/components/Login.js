@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormContainer, TheForm, TheInput, LoginButton } from "../styled-components/FormStyle";
+import { FormContainer, TheForm, TheInput, LoginButton, InputDiv, CheckBoxDiv} from "../styled-components/FormStyle";
 
 export default function Login() {
   const [formData, setFormData] = useState({});
@@ -8,6 +8,7 @@ export default function Login() {
     <FormContainer>
         <h1>Login to continue! </h1>
         <TheForm>
+          <InputDiv>
         <TheInput
           onChange={(e) =>
             setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -17,6 +18,8 @@ export default function Login() {
           name="username"
           value={formData?.username}
         />
+          </InputDiv>
+        <InputDiv>
         <TheInput
           onChange={(e) =>
             setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -26,7 +29,10 @@ export default function Login() {
           name="password"
           value={formData?.password}
         />
-         <input type='radio'/> 
+          </InputDiv>
+        <CheckBoxDiv>
+         <input type='checkbox'/> Remember me
+         </CheckBoxDiv>
         <div>
           <LoginButton>LOGIN</LoginButton>
         </div>
