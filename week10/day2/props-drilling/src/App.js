@@ -1,9 +1,14 @@
+import Neighborhood from "./components/neighborhood/Neighborhood";
+import Dealership from "./components/dealership/Dealership"
+import "../src/App.css"
 
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="box">
+      <h1>props drilling</h1>
+      <Neighborhood/>
+      <Dealership/>
     </div>
   );
 }
