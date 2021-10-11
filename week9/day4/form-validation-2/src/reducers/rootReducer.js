@@ -1,24 +1,23 @@
-//inside of reducer is the default state
+// reducers, they contain your default state
+import { combineReducers } from 'redux'
+import UserData from './userData';
+import graphData from './graphData';
+import LoginInfo from './loginInfo';
 
-const initialState = {
-    userName : "",
-    userEmail: "",
-    userAddress: ""
-};
-
-export const rootReducer = (state = initialState, action) => {
-    switch(action.type){
-        case "SET_USERNAME":
-        return {...state, userName: action.payload}
-
-        case "SET_USEREMAIL":
-        return {...state, userEmail: "litty250@yoho.com"}
-
-        case "SET_USERADDRESS":
-            return {...state, userAddress: "123 main St"}
-
-        default:
-            return state;
-    }
-
-};
+// const initialState = {
+//     userName: "",
+//     userEmail: "",
+//     userAddress: "",
+//     restaurants: "",
+//     userData: {},
+//   };
+  // useDispatch()
+  
+  // {type: ""}
+  const rootReducer = combineReducers({
+    UserData,
+    graphData,
+    LoginInfo,
+  });
+  
+  export default rootReducer;

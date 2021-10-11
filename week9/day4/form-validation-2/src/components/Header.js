@@ -6,18 +6,24 @@ import {
   UserPicture,
   WelcomeDiv,
 } from "../styled-components/HeaderStyle";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import UserData from "../reducers/userData";
 
 const URL = "https://randomuser.me/api/";
+
 
 export default function Header(props) {
   console.log(props)
   const viewSidebar = props.viewSidebar
   const setViewSidebar = props.setViewSidebar
-  const [user, setUser] = useState({});
+  
   const [counter, setCounter] = useState(0);
+  const user = useSelector((state) => state.UserData);
+  console.log(user)
   // useEffect is a hook
   // hook that fires when the component is mounted
+
+  const dispatch = useDispatch()
   useEffect(() => {
     const getNewsData = async () => {
       const getTheNews = await fetch(URL, {
@@ -30,24 +36,25 @@ export default function Header(props) {
       });
       const jsonNews = await getTheNews.json();
       console.log(jsonNews);
-      setUser({
-        ...jsonNews.results[0],
-        userImage: jsonNews?.results[0]?.picture?.thumbnail,
+      dispatch({
+        type: "GET_USER",
+        payload: { ...jsonNews.results[0] },
       });
     };
+
     getNewsData();
     return () => {};
-  }, [counter]);
+  }, [counter, dispatch]);
 
   // useEffect(()=>{}) fire when we mount and anytime we call useState
 
   // useEffect(()=>{},[]) fire when we mount and only when we mount
 
   // useEffect(()=>{},[variable]) fire when we mount and only when when variable changes in value
- const dispatch = useDispatch()
+
   return (
     <HeaderContainer>
-      <UserButton onClick={()=>setViewSidebar(!viewSidebar)}>___ ___ ___</UserButton>
+      <UserButton onClick={()=>setViewSidebar(!viewSidebar)}>Hide SideBar</UserButton>
       <button onClick ={() => dispatch({type: "SET_USERNAME", paylod: ["yes", "no", "maybe", "so", ]})}>Set UserName</button>
       <WelcomeDiv>
       <UserButton onClick={() => setCounter(counter + 1)}>
