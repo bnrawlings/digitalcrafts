@@ -6,6 +6,7 @@ import {
   UserPicture,
   WelcomeDiv,
 } from "../styled-components/HeaderStyle";
+import { useDispatch } from "react-redux";
 
 const URL = "https://randomuser.me/api/";
 
@@ -43,10 +44,11 @@ export default function Header(props) {
   // useEffect(()=>{},[]) fire when we mount and only when we mount
 
   // useEffect(()=>{},[variable]) fire when we mount and only when when variable changes in value
-
+ const dispatch = useDispatch()
   return (
     <HeaderContainer>
       <UserButton onClick={()=>setViewSidebar(!viewSidebar)}>___ ___ ___</UserButton>
+      <button onClick ={() => dispatch({type: "SET_USERNAME", paylod: ["yes", "no", "maybe", "so", ]})}>Set UserName</button>
       <WelcomeDiv>
       <UserButton onClick={() => setCounter(counter + 1)}>
         Get New User
