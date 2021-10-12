@@ -12,15 +12,21 @@ import Garage from "./components/Garage";
 
 function App() {
   const [viewSidebar, setViewSidebar]= useState(true)
+  const register = true
   return (
   <Router>
     <Switch>
+
+    <Route path='/login'>
+      <Login />
+      </Route>
+      <Route path= "/register">
+        <Login register ={register}/>
+        </Route>
     <MainContainer>
       <Header viewSidebar={viewSidebar} setViewSidebar={setViewSidebar}/>
       <Sidebar viewSidebar={viewSidebar}/>
-      <Route path='/login'>
-      <Login />
-      </Route>
+      
       <Route exact path='/'>
       <Home/>
       </Route>

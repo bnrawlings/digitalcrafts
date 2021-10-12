@@ -72,7 +72,7 @@ export default function SignUpForm() {
           />
         )}
       </form>
-      {counter}
+      {/* {counter} */}
       <div>
       <button onClick ={() => dispatch({type: "INCREMENT_COUNTER"})}>Increment Counter</button>
       <button>Decrement Counter</button>
