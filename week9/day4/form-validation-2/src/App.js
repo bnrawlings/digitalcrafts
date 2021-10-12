@@ -9,24 +9,25 @@ import ErrorPage from "./components/ErrorPage";
 import {useState} from'react';
 import Account from "./components/Account";
 import Garage from "./components/Garage";
+import {  useSelector } from "react-redux";
 
 function App() {
   const [viewSidebar, setViewSidebar]= useState(true)
   const register = true
+  const user = useSelector((state) => state.LoginInfo.loginInfo);
+  // const user = JSON.parse(localStorage.getItem("supabase.auth.token"));
+  // console.log({user})
   return (
   <Router>
     <Switch>
-
-    <Route path='/login'>
-      <Login />
-      </Route>
-      <Route path= "/register">
+    { user ?  ( 
+    <>
+    <Route path= "/register">
         <Login register ={register}/>
         </Route>
     <MainContainer>
       <Header viewSidebar={viewSidebar} setViewSidebar={setViewSidebar}/>
       <Sidebar viewSidebar={viewSidebar}/>
-      
       <Route exact path='/'>
       <Home/>
       </Route>
@@ -39,16 +40,16 @@ function App() {
       <Route path='/garage'>
       <Garage/>
       </Route>
-      {/* <Route path='*'>
-        <Redirect to='/errorpage'
-          />
-          </Route>
-          <Route path='/errorpage'>
-        <ErrorPage/>
-      </Route> */}
-    </MainContainer>
+      </MainContainer>
+      </>
+      ) : (
+      <Route path='/login'>
+      <Login />
+      </Route>
+    )};
     </Switch>
   </Router>
+    
   );
 }
 

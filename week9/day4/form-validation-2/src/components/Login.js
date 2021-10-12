@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FormContainer, TheForm, TheInput, LoginButton, InputDiv, CheckBoxDiv} from "../styled-components/FormStyle";
 import { createClient } from '@supabase/supabase-js'
-
+import { useHistory } from "react-router-dom";
+import UserData from "../reducers/userData";
+import { useDispatch } from "react-redux";
 //linking database via Supabase
 const supabase =createClient(
   "https://tjehpqqkyyhmeopnzygv.supabase.co",
@@ -11,23 +13,38 @@ const supabase =createClient(
 
 export default function Login(props) {
   const [formData, setFormData] = useState({username: "", password: ""});
+  const history = useHistory();
+  const dispatch = useDispatch()
+  
   console.log(formData)
-  //login user
+  //LOGIN USER
   const login = async (e) =>{
     e.preventDefault()
     const { user, session, error } = await supabase.auth.signIn({
       email: formData.username,
       password: formData.password,
     });
-    console.log (user, session, error)
+    if(session){
+    history.push("/dashboard");
+    dispatch({type: "SET_USER", payload : formData.username})
+    console.log(UserData)
+
+  } else{
+    alert(error.message)
+  }
   };
-  //register user
+  //REGISTER USER
   const register = async (e) => {
     e.preventDefault()
     const { user, session, error } = await supabase.auth.signUp({
       email: formData.username,
       password: formData.password,
     });
+    if(user){
+      history.push("/login");
+    } else{
+      alert(error.message)
+    }
     console.log(user, session)
   };
 

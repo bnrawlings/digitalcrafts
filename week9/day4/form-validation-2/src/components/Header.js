@@ -7,7 +7,7 @@ import {
   WelcomeDiv,
 } from "../styled-components/HeaderStyle";
 import { useDispatch, useSelector } from "react-redux";
-import UserData from "../reducers/userData";
+// import LoginInfo from "../reducers/loginInfo";
 
 const URL = "https://randomuser.me/api/";
 
@@ -18,7 +18,7 @@ export default function Header(props) {
   const setViewSidebar = props.setViewSidebar
   
   const [counter, setCounter] = useState(0);
-  const user = useSelector((state) => state.UserData);
+  const user = useSelector((state) => state.LoginInfo.loginInfo);
   console.log(user)
   // useEffect is a hook
   // hook that fires when the component is mounted
@@ -60,9 +60,9 @@ export default function Header(props) {
       <UserButton onClick={() => setCounter(counter + 1)}>
         Get New User
       </UserButton>
-      <UserPicture src={user?.picture?.large} alt="" />
+      {/* <UserPicture src={user?.picture?.large} alt="" /> */}
       <HeaderHeader>
-        Welcome {user?.name?.first} {""} {user?.name?.last}
+        Welcome {user}
       </HeaderHeader>
       </WelcomeDiv>
       
