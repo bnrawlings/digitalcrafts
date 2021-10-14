@@ -5,6 +5,7 @@ import debounce from "lodash.debounce";
 import { useSelector } from "react-redux";
 import { createUserFromLogin } from "./DatabaseFunctions";
 // import { FaSpinner } from "react-icons/fa";
+import { ConsoleLogVariable, IncrementCounter, DecrementCounter } from "../actions/SignUpFormActions";
 
 export default function SignUpForm() {
   const dispatch = useDispatch();
@@ -74,8 +75,11 @@ export default function SignUpForm() {
       </form>
       {/* {counter} */}
       <div>
-      <button onClick ={() => dispatch({type: "INCREMENT_COUNTER"})}>Increment Counter</button>
-      <button>Decrement Counter</button>
+      <button onClick={() => ConsoleLogVariable("Britty")}>Print to Console</button>
+      </div>
+      <div>
+      <button onClick={() => IncrementCounter (dispatch)}>Increment</button>
+      <button onClick={() => DecrementCounter (dispatch)}>Decrement</button>
       </div>
     </div>
   );
