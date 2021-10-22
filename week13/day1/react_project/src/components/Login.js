@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
 import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { FormDiv, LoginForm, LoginInput, LoginResButton, InputDiv, CheckBoxDiv, ButtonDiv} from '../styled-components/LoginStyled';
-import { SET_USER } from "../redux/actions/LoginFormActions"
+import { RegisterUser } from "../redux/actions/LoginFormActions";
+
+
 const supabase =createClient(
     "https://tjehpqqkyyhmeopnzygv.supabase.co",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzMTIwNDQyNywiZXhwIjoxOTQ2NzgwNDI3fQ.CXkE6d0tVK1OUXfzphKqf1mCHwIBsh_ddp11S9doo3Y"
@@ -23,8 +25,8 @@ export default function Login(props) {
       });
       if(session){
       history.push("/dashboard");
-      dispatch({type: SET_USER, payload : formData.username})
-      console.log(UserData)
+      dispatch({type: RegisterUser, payload : formData.username})
+      
   
     } else{
       alert(error.message)

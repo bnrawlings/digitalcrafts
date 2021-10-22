@@ -1,3 +1,5 @@
+import {  useSelector } from "react-redux";
+
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom"
 
 
@@ -20,14 +22,14 @@ function App() {
       <Switch>
       { user ? (
         <>
-        <Route path = "/register"> 
+        <Route exact path='/'> 
           <Header/>
           <Login register = {register}/>
         </Route>
     <AppDiv className="App">
       <Header/>
       <SectionsDiv className="sections">
-        <Route path = "/home">
+        <Route  path="/home">
           <Main />
         </Route>
         <Route path = "/products">
