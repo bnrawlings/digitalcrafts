@@ -1,3 +1,6 @@
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom"
+
+
 import Booking from "./components/Booking";
 import Header from "./components/Header";
 import Main from "./components/Main";

@@ -1,4 +1,4 @@
-import { SET_}
+import { SET_USER } from "../action-types/loginFormaction-types"
 
 const initialState = {
 
@@ -6,7 +6,7 @@ const initialState = {
 
 const LoginInfo = (state = initialState, action) => {
     switch (action.type) {
-        case "SET_USER":
+        case SET_USER:
             return {...state, loginInfo: action.payload}
             
         default:
