@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const H1Tag = styled.h1`
+display: flex;
+flex-direction: column;
+justify-content: center;
+`
+
+
 export const FormDiv = styled.div`
   /* grid-area: formcontainer; */
   display: flex;
@@ -34,6 +41,7 @@ export const LoginForm = styled.form`
 export const LoginInput = styled.input`
   height: 3rem;
   width: 20rem;
+  font-size: 22px;
   border-radius: 15px;
   padding: 10px;
   margin: 20px;
@@ -61,5 +69,8 @@ export const CheckBoxDiv = styled.div`
   left: 32px;
 `
 export const ButtonDiv = styled.div`
-
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 3px;
 `

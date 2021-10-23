@@ -20,17 +20,16 @@ function App() {
   return (
     <Router>
       <Switch>
-      { user ? (
-        <>
-        <Route exact path='/'> 
-          <Header/>
-          <Login register = {register}/>
-        </Route>
     <AppDiv className="App">
       <Header/>
       <SectionsDiv className="sections">
         <Route  path="/home">
+          <Login/>
           <Main />
+          <Products />
+          <Booking />
+          <Contact />
+          <Cart/>
         </Route>
         <Route path = "/products">
         <Products />
@@ -46,12 +45,6 @@ function App() {
         </Route>
       </SectionsDiv>
     </AppDiv>
-    </>
-      ) : (
-    <Route path = "/login">
-      <Login/>
-    </Route>
-    ) };
     </Switch>
     </Router>
   );
