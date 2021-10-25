@@ -10,21 +10,20 @@ import Products from "./components/Products";
 import Contact from "./components/Contact";
 import { AppDiv, SectionsDiv } from "./styled-components/HeaderStyled"
 import Cart from "./components/Cart";
-import Login from "./components/Login";
+import SideBar from "./components/SideBar";
+
 
 
 
 function App() {
-  const register = true
-  const user = useSelector((state) => state.LoginInfo.loginInfo);
+ 
   return (
     <Router>
       <Switch>
     <AppDiv className="App">
       <Header/>
       <SectionsDiv className="sections">
-        <Route  path="/home">
-          <Login/>
+        <Route  exact path="/">
           <Main />
           <Products />
           <Booking />

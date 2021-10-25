@@ -21,7 +21,7 @@ export const FormDiv = styled.div`
   text-shadow: 0 0 3px #DAE3E6, 0 0 5px #FEEFDE;
   font-size: larger;
   border-radius: 15px;
-  height: 37rem;
+  height: 80vh;
   width: 26rem;
   position: relative;
   left: 10rem;
