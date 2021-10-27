@@ -5,16 +5,11 @@ import SideBar from './SideBar'
 export default function Header() {
     return (
         <HeaderDiv className="headerdiv">
+             <h1>Tru Skin</h1>
             <SideBar/>
-           <WrapperDiv className="wrapper">
-               <WrapperLeft className="wrapperLeft">
-                    <h6>Left header wrapper</h6>
-               </WrapperLeft>
-               <WrapperRight className="wrapperRight">
-            
-               </WrapperRight>
-
-           </WrapperDiv>
+         <WrapperLeft>
+            <h1>Your journey starts here</h1>
+         </WrapperLeft>
         </HeaderDiv>
     )
 }

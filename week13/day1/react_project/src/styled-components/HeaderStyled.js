@@ -12,6 +12,7 @@ export const SectionsDiv = styled.div`
     top: 70px;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
+    overflow-x: hidden;
     &::-webkit-scrollbar{
         display: none;
     }
@@ -33,18 +34,12 @@ export const HeaderDiv = styled.div`
     top: 0;
     z-index: 2;
     
+    
+    
 `
-export const WrapperDiv = styled.div`
-
-`
-
 export const WrapperLeft = styled.div`
-display: flex;
-justify-content: right;
-align-items: center;
-`
-export const WrapperRight =styled.div`
-display: flex;
-justify-content: left;
-align-items: center;
+position: relative;
+left: 48rem;
+bottom: 4rem;
+
 `

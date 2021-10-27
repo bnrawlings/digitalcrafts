@@ -23,7 +23,7 @@ function App() {
     <AppDiv className="App">
       <Header/>
       <SectionsDiv className="sections">
-        <Route  exact path="/">
+        <Route  exact path="/home">
           <Main />
           <Products />
           <Booking />
