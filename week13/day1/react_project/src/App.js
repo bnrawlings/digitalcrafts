@@ -16,7 +16,7 @@ import SideBar from "./components/SideBar";
 
 
 function App() {
- 
+  
   return (
     <Router>
       <Switch>
@@ -26,12 +26,11 @@ function App() {
         <Route  exact path="/home">
           <Main />
           <Products />
-          <Booking />
           <Contact />
           <Cart/>
         </Route>
         <Route path = "/products">
-        <Products />
+        <Products  />
         </Route>
         <Route path = "/appointments">
           <Booking />

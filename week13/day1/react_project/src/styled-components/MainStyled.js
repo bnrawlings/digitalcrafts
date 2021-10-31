@@ -18,8 +18,8 @@ height: 60vh;
 width: 20rem;
 `
 export const ImgMain = styled.img`
---webkit-animation: fadein 2s;
-@-webkit-keyframes fadein {
+-webkit-animation: fadein 2s;
+@keyframes fadein {
     from {opacity: 0;}
     to { opacity: 1; }
 }
