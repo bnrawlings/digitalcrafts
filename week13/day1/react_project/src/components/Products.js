@@ -5,12 +5,15 @@ import { ProductsDiv } from '../styled-components/ProductsStyled'
 import ProductsContainer from './ProductsContainer'
 
 export default  function Products() {
-    const products = useSelector((state) => state.Products);
+    const products = useSelector((state) => state.ListProducts);
     const dispatch = useDispatch();
     console.log(products)
     return (
         <ProductsDiv>
-            <ProductsContainer/>
+          {/* {products?.map((item) => (
+            <ProductsContainer item ={item}/>
+          ))} */}
+            
         </ProductsDiv>
     )
 }
