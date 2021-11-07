@@ -1,23 +1,18 @@
 import React from 'react'
-import { ProductsDiv, ProductCard } from '../styled-components/ProductsStyled'
-import { useSelector } from "react-redux";
-import TheProducts from '../redux/reducers/products';
+import { useSelector, useDispatch } from 'react-redux'
+import { ADD_TO_CART } from '../redux/action-types/moveProducts-types'
+import { ProductsDiv } from '../styled-components/ProductsStyled'
+import ProductsContainer from './ProductsContainer'
 
-
-export default function Products() {
-  const products = useSelector(state => state.products)
-
+export default  function Products() {
+    const products = useSelector((state) => state.Products);
+    const dispatch = useDispatch();
+    console.log(products)
     return (
-        <ProductsDiv className="products">
-            <ProductCard>
-          {/* {products.map((product) => {
-              return (
-                  <h2>{products.name}</h2>,
-                  <img src ={products.img}/>,
-                  <h3>{products.price}</h3>
-              )
-          })} */}
-          </ProductCard>
+        <ProductsDiv>
+            <ProductsContainer/>
         </ProductsDiv>
     )
 }
+
+

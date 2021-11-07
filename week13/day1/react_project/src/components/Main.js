@@ -9,7 +9,7 @@ export default function Main() {
     return (
         <MainPageDiv className="mainpage">
            <PhotoDiv>
-               <ImgMain src={img1} height ="100%" width ="100%"/>
+           <ImgMain src={img1} height ="100%" width ="100%"/>
            </PhotoDiv>
            <PhotoDiv>
                <ImgMain src={img2} height ="100%" width ="100%"/>

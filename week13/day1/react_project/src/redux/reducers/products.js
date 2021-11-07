@@ -4,7 +4,7 @@ const initialState = {
     products : data
 }
 
-function TheProducts(state = initialState, action) {
+const Products = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
             return [...state, action.payload];
@@ -13,4 +13,4 @@ function TheProducts(state = initialState, action) {
     }
 }
 
-export default TheProducts
+export default Products
