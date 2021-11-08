@@ -16,11 +16,6 @@ export const SidebarData = [
     { title : "Products",
       path : "/products",
       icon :  <AiIcons.AiFillShopping/>, },   
-  
-   
-    { title : "Appointments",
-      path : "/appointments",
-      icon :  <BiIcons.BiCalendarPlus/>, },
          
           
     { title : "Contact",

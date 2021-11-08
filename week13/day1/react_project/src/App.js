@@ -3,7 +3,7 @@ import {  useSelector } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom"
 
 
-import Booking from "./components/Booking";
+
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Products from "./components/Products";
@@ -32,14 +32,11 @@ function App() {
         <Route path = "/products">
         <Products  />
         </Route>
-        <Route path = "/appointments">
-          <Booking />
+        <Route path = "/cart">
+          <Cart/>
         </Route>
         <Route path = "/contact">
           <Contact />
-        </Route>
-        <Route path = "/cart">
-          <Cart/>
         </Route>
       </SectionsDiv>
     </AppDiv>

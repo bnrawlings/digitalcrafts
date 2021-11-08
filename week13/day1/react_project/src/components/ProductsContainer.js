@@ -1,8 +1,8 @@
 import React from 'react'
-import { ProductsDiv, ProductCard } from '../styled-components/ProductsStyled'
-import { useSelector, useDispatch } from "react-redux";
-import { ProductImg } from '../styled-components/ProductsStyled';
-
+import { ProductCard } from '../styled-components/ProductsStyled'
+import { useDispatch } from "react-redux";
+import { ProductImg, AddButton } from '../styled-components/ProductsStyled';
+import { moveProducts } from '../redux/actions/moveProducts';
 
 
 export default function ProductsContainer(props) {
@@ -16,7 +16,7 @@ export default function ProductsContainer(props) {
                   <h2>{item?.name}</h2>,
                   <ProductImg src ={item?.img}/>,
                   <h3>{item?.price}</h3>
-                  <button>Add To Cart</button>
+                  <AddButton onClick={()=> moveProducts(dispatch, item)}>Add To Cart</AddButton>
           </ProductCard>
         
     )

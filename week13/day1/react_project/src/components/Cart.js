@@ -1,10 +1,18 @@
 import React from 'react'
-import { CartDiv } from '../styled-components/CartStyled'
+import { useSelector } from 'react-redux';
+import CartContainer from './CartContainer';
+import { CartDiv } from '../styled-components/CartStyled';
 
 export default function Cart() {
+    const cartFill = useSelector((state) => state.cart)
+  
+    console.log(cartFill)
+
     return (
         <CartDiv>
-            <h1>CART</h1>
+            {cartFill?.map((item) => (
+                <CartContainer item ={item}/>
+            ))}
         </CartDiv>
     )
 }
