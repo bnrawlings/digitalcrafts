@@ -10,9 +10,9 @@ export default  function Products() {
     console.log(products)
     return (
         <ProductsDiv>
-          {/* {products?.map((item) => (
+          {products?.map((item) => (
             <ProductsContainer item ={item}/>
-          ))} */}
+          ))}
             
         </ProductsDiv>
     )

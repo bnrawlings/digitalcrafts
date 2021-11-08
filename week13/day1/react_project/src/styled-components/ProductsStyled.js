@@ -12,12 +12,15 @@ align-items: center;
 
 export const ProductCard = styled.div`
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 border: black solid;
-height: 60vh;
-width: 100%;
-
+height: 20rem;
+width: 10%;
+`
+export const ProductImg = styled.img`
+height: 65%;
+width: 8rem;
 
 `
